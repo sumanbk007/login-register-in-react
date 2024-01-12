@@ -50,14 +50,14 @@ return (passwordRegex.test(password))
 let isvalid=true
 
 if(!validateUsername(username)){
-alert("username must be greatet than 3 characters")
+alert("Username must be greater than 3 characters")
 isvalid=false
 
 }
 
 if(!validatePassword(password)){
 
-    alert("Password must be greater than 8 characters.")
+    alert("Password must be  in format of Apple@#121 and greater than 8 characters.")
     isvalid = false;
 }
 
@@ -66,8 +66,6 @@ if(isvalid){
     console.log(formData)
     sendFormData()
     setFormData(initialFormData)
-    // alert("You have sucessfully registered")
-
 
 }
 
@@ -79,7 +77,7 @@ try {
     const response= await fetch("http://localhost:5151/register",{
         method:"POST",
 headers:{
-    "Contnet-type":"application/json",
+    "Content-Type":"application/json",
 
 },
 
